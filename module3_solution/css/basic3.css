@@ -1,0 +1,194 @@
+body {
+  font-size: 16px;
+  color: black;
+  background-color: blue;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+/** HEADER **/
+#header-nav {
+  background-color: hotpink;
+  border-radius: 0;
+  border: 0;
+}
+
+.navbar-brand {
+  padding-top: 25px;
+  height: 80px; /* customise height of navbar */
+}
+
+.navbar-brand h1 { /* Food, LLC */
+  font-family: Helvetica, Arial, sans-serif;
+  color: black;
+  font-size: 1.7em;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 30px;
+ }
+/*
+.navbar-brand a:hover, .navbar-brand a:focus {
+  text-decoration: none;
+} */
+
+
+#nav-list {
+  margin-top: 10px;
+}
+
+#nav-list a {
+  color: darkred;
+  text-align: center; /* not necessary, already used bootstrap class in html code */
+}
+
+#nav-list a:hover {
+  background: #E7E7E7;
+}
+
+#nav-list a span {
+  font-size: 1.3em;
+}
+
+.navbar-header button.navbar-toggle, .navbar-header .icon-bar {
+  border: 1px solid #61122f;
+}
+
+.navbar-header button.navbar-toggle {
+  clear: both;
+  margin-top: -55px; /* vertically align the button/toggle */
+}
+
+
+#menu {
+ color: lightyellow;
+ font-size: 1.6em;
+ /* text-align: center; --- not necessaru, already used bootstrap class in html code */
+}
+
+/* END HEADER */
+
+
+/* CONTENT */
+
+#sect {
+  border: 1px solid black;
+  background-color: beige;
+  width: 100%;
+  height: 1000px;
+  margin-right: auto;
+  margin-left: auto;
+  font-family: Helvetica, Arial, sans-serif;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  /*position: relative;*/
+  float: left;
+  overflow: hidden;
+  }
+
+p { /* main text */
+  color: darkblue;
+  padding: 2px 15px 15px 15px;
+  overflow: hidden;
+}  
+
+#chicken-sect { /* 'Chicken' text' */
+  font-size: 1.2em;
+  color: #009919;
+  font-weight: bold;
+  font-family: Helvetica, Arial, sans-serif;
+  padding: 10px 
+}
+
+#beef-sect { /* 'Beef' text' */
+  font-size: 1.2em;
+  color: #FF1919;
+  font-weight: bold;
+  font-family: Helvetica, Arial, sans-serif;
+  padding: 10px 
+}
+
+#fish-sect { /* 'Fish' text' */
+  font-size: 1.2em;
+  color: #B300B3;
+  font-weight: bold;
+  font-family: Helvetica, Arial, sans-serif;
+  padding: 10px 
+}
+
+#sect a:hover, #sect a:focus { /* dont show the underline link when cursor hovers over the text */ 
+  text-decoration: none;
+} 
+
+
+/********** Large devices only **********/
+@media (min-width: 1200px) {
+   
+  /* .navbar-brand h1 { Food, LLC 
+  font-family: Helvetica, Arial, sans-serif;
+  color: black;
+  font-size: 1.7em;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 0; */
+  }  
+}
+
+/********** Medium devices only **********/
+@media (min-width: 992px) and (max-width: 1199px) {
+  
+  #sect {
+  border: 1px solid black;
+  background-color: beige;
+  width: 100%;
+  height: 1000px;
+  margin-right: auto;
+  margin-left: auto;
+  font-family: Helvetica, Arial, sans-serif;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  /*position: relative;*/
+  float: left;
+  overflow: hidden;
+  }
+}
+
+/********** Small devices only **********/
+@media (min-width: 768px) and (max-width: 991px) {
+  
+  #sect {
+  border: 1px solid black;
+  background-color: beige;
+  width: 100%;
+  height: 1000px;
+  margin-right: auto;
+  margin-left: auto;
+  font-family: Helvetica, Arial, sans-serif;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  /*position: relative;*/
+  float: left;
+  overflow: hidden;
+  }
+
+}
+
+
+/********** Extra small devices only **********/
+@media (max-width: 767px) {
+  /* Header */
+
+  #sect {
+  border: 1px solid black;
+  background-color: beige;
+  width: 90%;
+  height: 1000px;
+  margin-right: 5%;
+  margin-left: 5%;
+  font-family: Helvetica, Arial, sans-serif;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  /*position: relative;*/
+  float: left;
+  overflow: hidden;
+  }
+}  
