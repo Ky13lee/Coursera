@@ -1,0 +1,17 @@
+<div id="result">
+  <ul ng-repeat="item in foundCtrl.items">
+    <li>
+        <button class='btn btn-danger pull-right'
+          ng-click="foundCtrl.onRemove({index: $index});">Don't want this one!</button>
+
+        <!-- these are the names of the properties (name:value) in the JSON file -->
+        <span>{{ item.name }} [{{ item.short_name }}]</span><br>
+        <span>{{item.description}}</span>
+
+    </li>
+  </ul>
+
+  <div ng-if="foundCtrl.isBeforeSearch()" class="message">Kindly input the search Item and click NARROW IT DOWN FOR ME!</div>
+  <div ng-if="foundCtrl.isNothingFound()" class="message">Nothing found.</div>
+
+</div>
