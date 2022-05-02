@@ -1,0 +1,39 @@
+body {
+  font-size: 1.2em;
+}
+
+div.tabs > a, div.tabs > button {
+  margin-right: 10px;
+  font-size: 1.2em;
+}
+
+div.tabs {
+  margin-bottom: 10px;
+}
+
+.activeTab {
+  font-weight: bold;
+}
+
+h1 {
+  margin-left: 20px;
+  color: red;
+}
+
+h3 {
+  margin-left: 20px;
+}
+
+.homepage {
+  margin-left: 25px;
+}
+
+.itemname {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.itemdes {
+  font-size: 18px;
+  font-style: italic;
+}
