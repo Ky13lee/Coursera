@@ -1,0 +1,69 @@
+<form class="container" name="signUpForm" novalidate ng-submit="signup.submit(signUpForm);">
+    <h1 class="text-center" style="margin-bottom: 5%;">Sign Up for the NewsLetter !</h1>
+    <div class="form-row">
+        <div class="form-group col-sm-6">
+          <span>First Name</span>
+          <input type="text" id="firstName" name="firstName" ng-model="signup.firstName"
+            class="form-control" placeholder="First Name" required ng-minlength="2" ng-maxlength="15"></input>
+          <span class="msgerror" ng-if="(signUpForm.firstName.$error.minlength ||signUpForm.firstName.$error.required) && signUpForm.firstName.$touched">
+            Input must have at least 2 characters <br>
+          </span>
+          <span class="msgerror" ng-if="signUpForm.firstName.$error.maxlength && signUpForm.firstName.$touched">
+            Input must not be longer than 15 characters
+          </span>
+        </div>
+
+        <div class="form-group col-sm-6">
+          <span>Last Name</span>
+          <input type="text" id="lastName" name="lastName" ng-model="signup.lastName"
+            class="form-control" placeholder="Last Name" required ng-minlength="2" ng-maxlength="15"></input>
+          <span class="msgerror" ng-if="( signUpForm.lastName.$error.minlength || signUpForm.lastName.$error.required) && signUpForm.lastName.$touched">
+            Input must have at least 2 characters long
+          </span>
+          <span class="msgerror" ng-if=" signUpForm.lastName.$error.maxlength && signUpForm.lastName.$touched">
+            Input must not be longer than 15 characters
+          </span>
+        </div>
+    </div>
+
+  <!-- to handle the overflow from each cell when the error msg appears.
+       to insert after every 2nd cell/block since it's 2 columns in this case-->
+   <div class="clearfix visible-sm-block visible-md-block visible-lg-block"></div>
+
+    <div class="form-row">
+        <div class="form-group col-sm-6">
+        <span>E-mail Address</span>
+        <input type="email" id="email" name="email" ng-model="signup.email" required class="form-control" placeholder="Email address"></input>
+        <span class="msgerror" ng-if="signUpForm.email.$invalid && signUpForm.email.$touched">Please enter a valid format: name@domain</span>
+        </div>
+
+        <div class="form-group col-sm-6">
+            <span>Phone Number</span>
+            <input type="text" id="phone" name="phone" required ng-model="signup.phone"
+            class="form-control" placeholder="Phone Number XXXX-XXXX" pattern="(\d{4})-(\d{4})"></input>
+           <span class="msgerror" ng-if="signUpForm.phone.$invalid && signUpForm.phone.$touched">
+            Phone number must be in the format: XXXX-XXXX
+          </span>
+        </div>
+     </div>
+
+ <div class="clearfix visible-sm-block visible-md-block visible-lg-block"></div>
+
+    <div class="form-row">
+        <div class="form-group col-sm-6">
+            <span>Short Name of Favourite Dish</span>
+            <input type="text" id="shortName" name="shortName" required ng-model="signup.shortName"
+            class="form-control" placeholder="Short Name of Dish, eg C1, FR1, VG2"></input>
+            <span class="msgerror" ng-if="signUpForm.shortName.$error.required &&
+             signUpForm.shortName.$touched">Please enter the Dish Short Name</span>
+             <span class="msgerror" ng-if="signup.showError">Invalid Dish Short Name!</span>
+        </div>
+
+        <div class="form-group col-sm-6">
+            <span>Click to Submit</span>
+            <button type="submit" required class="form-control btn btn-primary">Sign Up</button>
+            <span class="alert-success text-center"
+            ng-show="signup.showMessage">Your Information has been saved !</span>
+        </div>
+    </div>
+</form>
